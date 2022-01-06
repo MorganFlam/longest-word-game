@@ -6,10 +6,6 @@
   flex-direction: column;
   align-items: center;
 }
-h1 {
-  align-self: center;
-  font-family: "Noto Serif", serif;
-}
 
 #deck {
   display: flex;
@@ -19,8 +15,10 @@ h1 {
 
 .card {
   display: flex;
-  background-color: rgb(224, 197, 123);
-  margin: 8px;
+  background: radial-gradient(circle, transparent 60%, rgb(167, 159, 137)),
+    rgb(216, 206, 178);
+  height: 180px;
+  margin: 4px;
   height: 135px;
   width: 75px;
   align-items: center;
@@ -28,8 +26,9 @@ h1 {
   font-family: "Oswald", sans-serif;
   font-size: 80px;
   padding: 10px;
+  border: 2px solid rgb(122, 66, 66);
   border-radius: 5px;
-  box-shadow: 0px 0px 4px;
+  box-shadow: 0 0 15px rgb(0, 0, 0);
 }
 
 .submission {

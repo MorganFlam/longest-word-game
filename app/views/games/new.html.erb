@@ -1,5 +1,4 @@
 <div class="container">
-  <h1>THE LONGEST WORD</h1>
   <div id="deck">
     <% @new_game.each do |letter| %>
       <div class="card"><%= letter %></div>
@@ -7,9 +6,15 @@
   </div>
 
   <div class="submission">
-    <form action="submit">
-      <input type="text" name="play" class="answer">
-      <input type="button" value="Submit" class="btn">
+    <form action="/score" method="POST" class="form-inline">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= hidden_field_tag :letters, @new_game %>
+      <div class="input-group input-group">
+        <input type="text" name="word" class="form-control">
+        <span class="input-group-btn">
+        <input type="submit" value="Play" class="btn btn-default">
+        </span>
+      </div>
     </form>
   </div>
 </div>

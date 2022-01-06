@@ -1,2 +1,10 @@
-<h1>Games#score</h1>
-<p>Find me in app/views/games/score.html.erb</p>
+<h1>RESULTS</h1>
+  <% if @included %>
+    <% if @english_word %>
+      <p><%= @word %></p>
+    <% else %>
+    <p>Not an english word</p>
+    <% end %>
+  <% else %>
+    <p>Incorrect letters</p>
+  <% end %>
